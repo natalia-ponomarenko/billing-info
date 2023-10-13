@@ -1,4 +1,5 @@
 {
+  "homepage": "https://natalia-ponomarenko.github.io/billing-info",
   "name": "billing-info",
   "version": "1.0.0",
   "description": "billing-info",
@@ -13,7 +14,9 @@
     "lint-styles": "stylelint **/*.css **/*.scss",
     "lint-styles:fix": "stylelint --fix **/*.css **/*.scss",
     "lint": "concurrently \"npm:lint-js\" \"npm:lint-styles\"",
-    "lint:fix": "concurrently \"npm:lint-js:fix\" \"npm:lint-styles:fix\""
+    "lint:fix": "concurrently \"npm:lint-js:fix\" \"npm:lint-styles:fix\"",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -33,12 +36,12 @@
   "bugs": {
     "url": "https://github.com/natalia-ponomarenko/billing-info/issues"
   },
-  "homepage": "https://github.com/natalia-ponomarenko/billing-info#readme",
   "devDependencies": {
     "concurrently": "^6.0.2",
     "eslint": "^7.24.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
+    "gh-pages": "^6.0.0",
     "husky": "^6.0.0",
     "parcel-bundler": "^1.12.5",
     "sass": "^1.32.10",
